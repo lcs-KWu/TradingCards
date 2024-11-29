@@ -11,20 +11,61 @@ struct TradingCardDetailed: View {
     let ThingsToShow : Playercard
     var body: some View {
         ScrollView {
-            VStack {
+            ZStack {
                 Image(ThingsToShow.BackgroundImage)
                     .resizable()
-                    .scaledToFit()
-                Text(ThingsToShow.image)
-                    .font(.system(size: 30, weight: .semibold))
-                Text(ThingsToShow.Teamlogo)
-                    .font(.system(size:15 , weight: .semibold))
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .frame(width:500,height : 1000)
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.gray)
+                    
+                    
+                    .frame(width:250,height: 350)
+                    .overlay(
+                        Image(ThingsToShow.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(
+                                width:300,
+                                height:300
+                            )
+                    )
+                    .overlay(
+                        HStack{
+                            Spacer()
+                            VStack{
+                                Spacer()
+                                Image(ThingsToShow.Teamlogo)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 50,height: 50)
+                            }
+                        }
+                        .padding()
+                    )
+                    .offset(x:0,y:-210)
+                    .overlay(
+                        HStack{
+                            VStack{
+                                Spacer()
+                                Text(ThingsToShow.playerName)
+                                    .foregroundColor(.purple)
+                                            .font(.system(size: 30, weight: .semibold))
+                                            
+                            }
+                        }
+                    )
+                    
                 
                 
                     
-            }
-            navigationTitle(ThingsToShow.playerName)
+                    
+                }
+           
         }
+        .navigationTitle(ThingsToShow.playerName)
+
     }
 }
 
