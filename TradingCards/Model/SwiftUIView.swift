@@ -5,14 +5,13 @@
 //  Created by Yixuan Wu on 2024-11-29.
 //
 
-import SwiftUI
-
-struct SwiftUIView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+import Foundation
+struct Playercard: Identifiable{
+    let id = UUID()
+    let BackgroundImage: String
+    let image: String
+    let Teamlogo: String
+    let
 }
 
-#Preview {
-    SwiftUIView()
-}
+let RF = Playercard(BackgroundImage: "Background", image: "PlayerImage",Teamlogo: "TeamLogo")
