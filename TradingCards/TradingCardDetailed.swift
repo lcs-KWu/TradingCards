@@ -23,8 +23,13 @@ struct TradingCardDetailed: View {
                 
                     
             }
-            
+            navigationTitle(ThingsToShow.playerName)
         }
     }
 }
 
+#Preview {
+    NavigationStack {
+        TradingCardDetailed(ThingsToShow: RF)
+    }
+}

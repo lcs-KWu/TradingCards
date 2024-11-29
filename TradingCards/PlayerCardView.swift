@@ -47,17 +47,25 @@ struct PlayerCardView: View {
                     .padding()
                 )
                 .offset(x:0,y:-210)
-            
+                .overlay(
+                    HStack{
+                        VStack{
+                            Spacer()
+                            Text(PlayerCardProvided.playerName)
+                                .foregroundColor(.purple)
+                                        .font(.system(size: 30, weight: .semibold))
+                                        
+                        }
+                    }
+                )
                 
             
             
                 
                 
             }
-        HStack {
-            Text("PlayerName")
-                .font(.system(size: 30, weight: .semibold))
-            
-        }
+       
+        
+    
     }
 }

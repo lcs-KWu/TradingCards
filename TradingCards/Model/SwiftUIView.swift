@@ -11,7 +11,7 @@ struct Playercard: Identifiable{
     let BackgroundImage: String
     let image: String
     let Teamlogo: String
-    let
+    let playerName:String
 }
 
-let RF = Playercard(BackgroundImage: "Background", image: "PlayerImage",Teamlogo: "TeamLogo")
+let RF = Playercard(BackgroundImage: "Background", image: "PlayerImage",Teamlogo: "TeamLogo",playerName: "RF")
