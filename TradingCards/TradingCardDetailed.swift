@@ -48,15 +48,17 @@ struct TradingCardDetailed: View {
                     .overlay(
                         HStack{
                             VStack{
-                                Spacer()
+                                Star()
+                                    .offset(x:0,y: 100)
+                                    .foregroundColor(.white)
                                 Text(ThingsToShow.playerName)
                                     .foregroundColor(.purple)
-                                            .font(.system(size: 30, weight: .semibold))
-                                            
+                                            .font(.system(size: 20, weight: .semibold))
+                                            .offset(x:0,y:-100)
                             }
                         }
                     )
-                    
+                   
                 
                 
                     
@@ -65,7 +67,7 @@ struct TradingCardDetailed: View {
            
         }
         .navigationTitle(ThingsToShow.playerName)
-
+        
     }
 }
 

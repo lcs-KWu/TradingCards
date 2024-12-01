@@ -9,7 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PlayerCardView(PlayerCardProvided: RF)
+        NavigationStack{
+            List(playerlist) { currentplayer in
+                NavigationLink {
+                    TradingCardDetailed(ThingsToShow: currentplayer)
+                } label: {
+                    PlayerCardView(PlayerCardProvided: currentplayer)
+                }
+            }
+            .navigationTitle(
+                "My favourite things"
+            )
+        }
             
         }
        
